@@ -2,7 +2,7 @@ function listener(highlightInfo){
     chrome.browserAction.setIcon({
         path : "icons/icon_128.png"});
     chrome.tabs.query({currentWindow: true, active: true}, function(tabs){	
-        var Url = tabs[0].url
+        var Url = tabs[0].url;
         var xhttp = new XMLHttpRequest();
 	
 	xhttp.onreadystatechange = function() {
@@ -11,7 +11,7 @@ function listener(highlightInfo){
 		    chrome.browserAction.setIcon({
 			path : "icons/451/icon_128.png"
 		    });
-		    ;}//endif this.status
+		}//endif this.status
 		else { //no censorship detected, do something
 		}
 	    }//end of readystate
